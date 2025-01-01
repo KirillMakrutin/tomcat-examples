@@ -22,7 +22,7 @@ public class AnnotationController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType("text/html");
         resp.getWriter().write("<h1>Hello from AnnotationController</h1>");
-        resp.getWriter().write("<a href=\"/\">Main</h1>");
+        resp.getWriter().write("<a href=\"" + req.getContextPath() + "/\">Main</h1>");
         LOGGER.info("GET request received.");
     }
 

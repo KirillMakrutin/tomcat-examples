@@ -25,7 +25,7 @@ public class BaseController extends HttpServlet {
 
         resp.setContentType("text/html");
         resp.getWriter().write("<h1>Hello from AnnotationController</h1>");
-        resp.getWriter().write("<a href=\"/\">Main</h1>");
+        resp.getWriter().write("<a href=\"" + req.getContextPath() + "/\">Main</h1>");
         LOGGER.info("GET request received.");
     }
 }
